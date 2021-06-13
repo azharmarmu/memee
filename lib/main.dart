@@ -1,27 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:pedantic/pedantic.dart';
+import 'package:hive/hive.dart';
+import 'package:path_provider/path_provider.dart' as path_provider;
+import '_di/get_it.dart' as getIt;
+import 'presentation/memee_app.dart';
 
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.amberAccent,
-        body: Center(
-          child: Text(
-            'Marmu',
-            style: TextStyle(
-              color: Colors.brown,
-              fontSize: 40,
-            ),
-          ),
-        ),
-      ),
-    );
-  }
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  unawaited(
+    SystemChrome.setPreferredOrientations(
+      [DeviceOrientation.portraitUp],
+    ),
+  );
+  final appDocumentDir = await path_provider.getApplicationDocumentsDirectory();
+  Hive.init(appDocumentDir.path);
+  // Hive.registerAdapter(MeatTableAdapter());
+  unawaited(getIt.init());
+  runApp(MemeeApp());
 }
