@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:memee/presentation/core/constants/size_constants.dart';
 
 import '../../blocs/loading/loading_cubit.dart';
 import 'loading_circle.dart';
@@ -24,7 +25,7 @@ class LoadingScreen extends StatelessWidget {
                 ),
                 child: Center(
                   child: LoadingCircle(
-                    size: 200,
+                    size: Sizes.dimen_200.w,
                   ),
                 ),
               ),

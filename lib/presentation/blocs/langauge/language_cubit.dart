@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
-import 'package:memee/_common/languages.dart';
+import 'package:memee/_common/languages_constants.dart';
 import 'package:memee/domain/entities/langauge_entity.dart';
 import 'package:memee/domain/entities/no_params.dart';
 import 'package:memee/domain/usecases/get_preferred_langauge.dart';

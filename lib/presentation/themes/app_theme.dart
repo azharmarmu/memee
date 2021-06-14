@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:memee/presentation/blocs/theme/theme_cubit.dart';
+import 'package:memee/presentation/core/constants/size_constants.dart';
 
 import 'app_color.dart';
 
@@ -62,7 +63,7 @@ class ThemeText {
   static TextStyle? get _lightCaption =>
       _darkCaption?.copyWith(color: Colors.white);
 
-  static getTextTheme() => TextTheme(
+  static getDarkTextTheme() => TextTheme(
         headline5: _whiteHeadline5,
         headline6: _whiteHeadline6,
         subtitle1: whiteSubtitle1,
@@ -114,7 +115,7 @@ ThemeData apptheme(context, theme) {
     ),
     visualDensity: VisualDensity.adaptivePlatformDensity,
     textTheme: theme == Themes.dark
-        ? ThemeText.getTextTheme()
+        ? ThemeText.getDarkTextTheme()
         : ThemeText.getLightTextTheme(),
     appBarTheme: const AppBarTheme(elevation: 0),
     inputDecorationTheme: InputDecorationTheme(
