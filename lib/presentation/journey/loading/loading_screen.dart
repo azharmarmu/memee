@@ -25,7 +25,7 @@ class LoadingScreen extends StatelessWidget {
                 ),
                 child: Center(
                   child: LoadingCircle(
-                    size: Sizes.dimen_200.w,
+                    size: SizeConstants.dimen_200.w,
                   ),
                 ),
               ),

@@ -1,7 +1,7 @@
 import 'package:memee/domain/entities/langauge_entity.dart';
 
-class Languages {
-  const Languages._();
+class LanguageConstants {
+  const LanguageConstants._();
 
   static const languages = [
     LanguageEntity(code: 'en', value: 'English'),

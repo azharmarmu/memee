@@ -1,6 +1,6 @@
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
-import 'package:memee/presentation/core/constants/assets_constants.dart';
+import 'package:memee/presentation/core/constants/asset_constants.dart';
 
 class LoadingCircle extends StatelessWidget {
   final double size;
@@ -13,7 +13,7 @@ class LoadingCircle extends StatelessWidget {
       width: size,
       height: size,
       child: FlareActor(
-        Assets.loadingCircle,
+        AssetConstants.loadingCircle,
         animation: 'load',
         snapToEnd: true,
       ),

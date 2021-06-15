@@ -1,7 +1,7 @@
 import 'package:memee/presentation/core/screen_util.dart';
 
-class Sizes {
-  Sizes._();
+class SizeConstants {
+  SizeConstants._();
 
   static const double dimen_0 = 0;
   static const double dimen_1 = 1;
